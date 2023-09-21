@@ -1,0 +1,34 @@
+.sticky-note {
+    width: 200px;
+    min-height: 200px;
+    padding: 10px;
+    background-color: #000000CC;
+    border: 0px solid #fdd835;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.sticky-note-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+  word-wrap: break-word;
+}
+.sticky-note-content, .sticky-note-title {
+  color: #0dc300;
+}
+
+.sticky-note-content {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.sticky-note-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sticky-note-link:visited {
+  color: inherit;
+}

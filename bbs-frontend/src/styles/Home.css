@@ -1,0 +1,186 @@
+body, html {
+  height: 100%;
+}
+
+.home {
+  min-height: 100vh;
+  height: 200vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: -40;
+  position: absolute;
+  overflow: auto;
+}
+
+#home-background {
+  margin-top: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: url("../assets/fdb21c0e4f3dbb6ccd9a63c68fce8645.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -50;
+  overflow: auto;
+}
+
+.home-title {
+  font-size: 10vw;
+  margin-bottom: 1rem;
+  float: left;
+  top: 0; 
+  left: 2vw;
+  word-spacing: 100vw;
+  width: fit-content;
+  transition: 50vw 1s linear;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-style: italic;
+  position: absolute;
+}
+
+#memer {
+  width: 100px;
+  height: 50px;
+}
+
+.earth {
+  display: block;
+  position: absolute;
+  right: 11vw;
+  top: 10vw;
+  border-radius: 50%;
+  background: url('../assets/earth.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 33vw;
+  height:33vw;
+}
+
+
+.orbit {
+  animation: hide ease-in-out infinite;
+  animation-duration: 5s;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  height: 30vw;
+  margin: auto;
+  position: absolute;
+  right: 1vw;
+  transform: rotateZ(80deg) rotateY(80deg);
+  transform-style: preserve-3d;
+  width: 25vw;
+}
+
+.orbit .moon {
+  animation: move linear infinite;
+  animation-duration: 5s;
+  width: 10vw;
+  height: 5vw;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.moon {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+
+@keyframes move {
+  0% {
+    transform: rotateZ(-90deg) translateX(22vw) rotateZ(90deg) rotateY(-70deg);
+  }
+  100% {
+    transform: rotateZ(270deg) translateX(22vw) rotateZ(-270deg) rotateY(-70deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    z-index: 20;
+  }
+  100% {
+    z-index: -20;
+  }
+}
+
+
+#bulletin-board {
+  margin-top: 0px;
+  width: 40vw;
+  top: 230px;
+}
+#MEMESat-title {
+  margin-bottom: 0px;
+  left: 2vw;
+  top: 0;
+}
+
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position:absolute;
+}
+
+.scroll-section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+@keyframes moveTitle {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.MeetTheTeamContainer {
+  width: 100%;
+  position: absolute;
+  top: 120vh;
+}
+#meet-the-team-title {
+  font-size: 6vw;
+  float: left;
+  left: 2vw;
+  margin-left: 2vw;
+  width: fit-content;
+  transition: 50vw 1s linear;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-style: italic;
+}
+#memeteam {
+  width: 47vw;
+  height: 36vw;
+}
